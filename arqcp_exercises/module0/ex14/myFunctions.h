@@ -1,0 +1,1 @@
+int count_value(int vec[], int n, int value);

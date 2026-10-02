@@ -1,0 +1,1 @@
+int find_pattern(char str[], char patt[]);
