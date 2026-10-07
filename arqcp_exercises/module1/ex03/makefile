@@ -2,10 +2,10 @@
 # ------------------------------------------
 # variaveis
 #----------
-INCLUDES =
-SOURCES = main.c
-OBJFILES = main.o
-EXEC = ex01
+INCLUDES = myFunctions.h
+SOURCES = myFunctions.c main.c
+OBJFILES = myFunctions.o main.o
+EXEC = ex03
 # Suffix rules
 #--------------
 .SUFFIXES : .c .o

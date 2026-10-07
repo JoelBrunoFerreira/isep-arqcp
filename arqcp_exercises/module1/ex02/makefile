@@ -5,7 +5,7 @@
 INCLUDES =
 SOURCES = main.c
 OBJFILES = main.o
-EXEC = ex01
+EXEC = ex02
 # Suffix rules
 #--------------
 .SUFFIXES : .c .o
