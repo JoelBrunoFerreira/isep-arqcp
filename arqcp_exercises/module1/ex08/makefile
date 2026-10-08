@@ -5,7 +5,7 @@
 INCLUDES = myFunctions.h
 SOURCES = myFunctions.c main.c
 OBJFILES = myFunctions.o main.o
-EXEC = ex06
+EXEC = ex08
 # Suffix rules
 #--------------
 .SUFFIXES : .c .o
