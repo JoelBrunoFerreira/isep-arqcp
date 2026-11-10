@@ -8,7 +8,6 @@ check_tires:
 	sw s1, 20(sp) # Save s1
 	sw s2, 16(sp) # Save s2
 	sw s3, 12(sp) # Save s3
-	sw s4, 8(sp) # Save s4
 
 	mv s0, a0 # Move the first argument (pointer to tire data) to s0
 	mv s1, a1 # Move the second argument (number of tires) to s1
@@ -33,7 +32,6 @@ check_tires:
 
 .Lcheck_tires_done:
 	mv a0, s3 # Move the number of tires that need filling to the return register (return count)
-	lw s4, 8(sp)  # Restore s4
 	lw s3, 12(sp) # Restore s3
 	lw s2, 16(sp) # Restore s2
 	lw s1, 20(sp) # Restore s1

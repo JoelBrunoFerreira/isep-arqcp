@@ -14,11 +14,22 @@ int main(void) {
     };
     unsigned long long *ready[NROBOTS];
 
-
+    /*
+    // Test the can_travel function for each robot
+    for (int i = 0; i < NROBOTS; i++) {
+        if (can_travel(&robots[i])) {
+            printf("Robot %d can travel.\n", i+1);
+        } else {
+            printf("Robot %d cannot travel.\n", i+1);
+        }
+    }
+    */
+    
     // Call the function to check robots and get the count of robots ready to travel
-    int ready_count = check_robots(robots, NROBOTS, ready); 
-
-    printf("Number of robots ready to travel: %d\n", ready_count);
+    int ready_count = check_robots(robots, NROBOTS, ready);
+    for (int i = 0; i < ready_count; i++) {
+        printf("Robot %d is ready to travel.\n", (int)(ready[i] - robots) + 1);
+    }
 
     return 0;
 }
