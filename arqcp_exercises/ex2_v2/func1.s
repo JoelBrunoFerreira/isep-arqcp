@@ -3,7 +3,7 @@
 
 can_travel:
     # int can_travel(unsigned long long *robot);
-    # a0 = robot
+    # a0 = pointer to the robot's data (ponto a, ponto b, bateria, estado)
     # ===========================================
     
     lhu t0, 0(a0) # ponto a

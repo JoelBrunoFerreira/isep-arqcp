@@ -3,9 +3,9 @@
 
 check_robots:
     # int check_robots(unsigned long long *robots, int n, unsigned long long **ready);
-    # a0 = robots
-    # a1 = n
-    # a2 = ready
+    # a0 = pointer to the first robot's data
+    # a1 = number of robots (n)
+    # a2 = pointer to the output array (ready)
     # ===========================================
 
     # Prologue

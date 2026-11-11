@@ -1,5 +1,9 @@
 .section .text
 	.globl check_tires
+	# int check_tires(unsigned int * cars, int n, unsigned int**fill);
+	# a0: pointer to the first car's pressure data
+	# a1: number of cars (n)
+	# a2: pointer to the output array (fill)
 
 check_tires:
 	addi sp, sp, -32 # Allocate stack space for saved registers
@@ -17,7 +21,7 @@ check_tires:
 .Lcheck_tires_loop:
     bge  zero, s1, .Lcheck_tires_done # Stop when n <= 0
 
-    mv   a0, s0
+    mv   a0, s0 # Move the pointer to the current car's pressure data to a0
     call low_pressure
     beqz a0, .Lcheck_tires_next
 
@@ -27,7 +31,7 @@ check_tires:
 
 .Lcheck_tires_next:
     addi s0, s0, 4     # Advance to the next car
-    addi s1, s1, -1
+    addi s1, s1, -1	   # Decrement the number of cars left to check (n--)
     j    .Lcheck_tires_loop
 
 .Lcheck_tires_done:
